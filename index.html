@@ -143,20 +143,14 @@
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
    <script src="https://unpkg.com/scrollreveal"></script>
-   <audio id="background-music" src="./assets/alma_nua.mp3" autoplay loop></audio>
+   <audio id="background-music" src="./assets/alma_nua.mp3" loop></audio>
    <script>
-      var typed = new Typed('#typed', {
-         stringsElement: '#typed-strings', typeSpeed: 30
-      })
-      const sr = ScrollReveal({
-            origin: 'top',
-            distance: '50px',
-            duration: 2000,
-            reset: true
-        });
-        ScrollReveal().reveal('.proj-card', { delay: 300, opacity: .2, origin: 'bottom' });
-        ScrollReveal().reveal('.ser-card', { delay: 300, opacity: .2, origin: 'bottom' });
-        ScrollReveal().reveal('.skill-card', { delay: 300, opacity: .2, origin: 'bottom' });
+      document.addEventListener('DOMContentLoaded', function() {
+         const backgroundMusic = document.getElementById('background-music');
+         if (backgroundMusic) {
+            backgroundMusic.play();
+         }
+      });
    </script>
 </body>
 </html>
